@@ -40,7 +40,7 @@ class ViewController: UIViewController {
         let lblEmail = UILabel()
         lblEmail.frame = CGRect(x: 30, y: 120, width: 100, height: 30)
         lblEmail.text = "E-mail"
-        lblEmail.font = UIFont(name: "Chalkboard SE", size: 14)
+        lblEmail.font = UIFont(name: "SDMiSaeng", size: 14)
         self.view.addSubview(lblEmail)
         
         let lblUpdate = UILabel()

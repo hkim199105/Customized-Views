@@ -13,6 +13,7 @@
 		60B2ED3021F76DD900689EB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60B2ED2F21F76DD900689EB1 /* Assets.xcassets */; };
 		60B2ED3321F76DD900689EB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60B2ED3121F76DD900689EB1 /* LaunchScreen.storyboard */; };
 		60B2ED5821F77DC400689EB1 /* ReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B2ED5721F77DC400689EB1 /* ReadViewController.swift */; };
+		60C70BD621F7827B00E0665D /* SDMiSaeng.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 60C70BD521F7827B00E0665D /* SDMiSaeng.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		60B2ED3921F76DD900689EB1 /* Button HellTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Button HellTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		60B2ED4421F76DD900689EB1 /* Button HellUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Button HellUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		60B2ED5721F77DC400689EB1 /* ReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadViewController.swift; sourceTree = "<group>"; };
+		60C70BD521F7827B00E0665D /* SDMiSaeng.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SDMiSaeng.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 		60B2ED2721F76DD700689EB1 /* Customized Views */ = {
 			isa = PBXGroup;
 			children = (
+				60C70BD521F7827B00E0665D /* SDMiSaeng.ttf */,
 				60B2ED2821F76DD700689EB1 /* AppDelegate.swift */,
 				60B2ED2A21F76DD700689EB1 /* ViewController.swift */,
 				60B2ED2C21F76DD700689EB1 /* Main.storyboard */,
@@ -206,6 +209,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60C70BD621F7827B00E0665D /* SDMiSaeng.ttf in Resources */,
 				60B2ED3321F76DD900689EB1 /* LaunchScreen.storyboard in Resources */,
 				60B2ED3021F76DD900689EB1 /* Assets.xcassets in Resources */,
 				60B2ED2E21F76DD700689EB1 /* Main.storyboard in Resources */,
