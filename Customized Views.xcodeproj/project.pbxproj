@@ -204,7 +204,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 60B2ED2021F76DD700689EB1 /* Build configuration list for PBXProject "Button Hell" */;
+			buildConfigurationList = 60B2ED2021F76DD700689EB1 /* Build configuration list for PBXProject "Customized Views" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -543,7 +543,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		60B2ED2021F76DD700689EB1 /* Build configuration list for PBXProject "Button Hell" */ = {
+		60B2ED2021F76DD700689EB1 /* Build configuration list for PBXProject "Customized Views" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				60B2ED4B21F76DD900689EB1 /* Debug */,
