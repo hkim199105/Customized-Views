@@ -94,6 +94,9 @@ class ViewController: UIViewController {
         self.txtInterval.text = "every 0 minutes"
         self.view.addSubview(self.txtInterval)
         
+        let submitBtn = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(submit(_:)))
+        self.navigationItem.rightBarButtonItem = submitBtn
+        
         // print available font list
         let fonts = UIFont.familyNames      // family name != font name
         for f in fonts {
@@ -114,6 +117,15 @@ class ViewController: UIViewController {
     
     @objc func presentIntervalValue(_ sender: UIStepper) {
         self.txtInterval.text = ("every \( Int(sender.value) ) minutes")
+    }
+    
+    @objc func submit(_ sender: UIBarButtonItem) {
+        let mReadVC = ReadViewController()
+        mReadVC.pEmail = self.paramEmail.text
+        mReadVC.pUpdate = self.paramUpdate.isOn
+        mReadVC.pInterval = self.paramInterval.value
+        
+        self.navigationController?.pushViewController(mReadVC, animated: true)
     }
 
 }
