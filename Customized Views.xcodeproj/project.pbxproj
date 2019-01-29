@@ -35,6 +35,11 @@
 		60CCD700220090E7003A9757 /* more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60CCD6FE220090E7003A9757 /* more@2x.png */; };
 		60CCD701220090E7003A9757 /* arrow-back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60CCD6FF220090E7003A9757 /* arrow-back@2x.png */; };
 		60CCD70522009F4B003A9757 /* MapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CCD70422009F4B003A9757 /* MapKitViewController.swift */; };
+		60CCD7072200A2ED003A9757 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CCD7062200A2ED003A9757 /* ImageViewController.swift */; };
+		60CCD70A2200A399003A9757 /* note.png in Resources */ = {isa = PBXBuildFile; fileRef = 60CCD7082200A399003A9757 /* note.png */; };
+		60CCD70B2200A399003A9757 /* rating5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60CCD7092200A399003A9757 /* rating5@2x.png */; };
+		60CCD70D2200A3CC003A9757 /* ControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CCD70C2200A3CC003A9757 /* ControlViewController.swift */; };
+		60CCD70F2200A54D003A9757 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CCD70E2200A54D003A9757 /* ListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +92,11 @@
 		60CCD6FE220090E7003A9757 /* more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more@2x.png"; sourceTree = "<group>"; };
 		60CCD6FF220090E7003A9757 /* arrow-back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-back@2x.png"; sourceTree = "<group>"; };
 		60CCD70422009F4B003A9757 /* MapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitViewController.swift; sourceTree = "<group>"; };
+		60CCD7062200A2ED003A9757 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		60CCD7082200A399003A9757 /* note.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = note.png; sourceTree = "<group>"; };
+		60CCD7092200A399003A9757 /* rating5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rating5@2x.png"; sourceTree = "<group>"; };
+		60CCD70C2200A3CC003A9757 /* ControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlViewController.swift; sourceTree = "<group>"; };
+		60CCD70E2200A54D003A9757 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +139,10 @@
 			isa = PBXGroup;
 			children = (
 				60B2ED2A21F76DD700689EB1 /* ViewController.swift */,
+				60CCD70E2200A54D003A9757 /* ListViewController.swift */,
 				60CCD70422009F4B003A9757 /* MapKitViewController.swift */,
+				60CCD7062200A2ED003A9757 /* ImageViewController.swift */,
+				60CCD70C2200A3CC003A9757 /* ControlViewController.swift */,
 			);
 			path = "Customized Navigation Controller";
 			sourceTree = "<group>";
@@ -153,6 +166,8 @@
 				60CCD6FC22008E8D003A9757 /* swift_logo@3x.png */,
 				60CCD6FF220090E7003A9757 /* arrow-back@2x.png */,
 				60CCD6FE220090E7003A9757 /* more@2x.png */,
+				60CCD7082200A399003A9757 /* note.png */,
+				60CCD7092200A399003A9757 /* rating5@2x.png */,
 				60C70BD521F7827B00E0665D /* SDMiSaeng.ttf */,
 			);
 			path = Resources;
@@ -309,6 +324,7 @@
 				60B2ED3021F76DD900689EB1 /* Assets.xcassets in Resources */,
 				600B3295220070B10011AB22 /* connectivity-bar.png in Resources */,
 				600B3294220070B10011AB22 /* file-tree.png in Resources */,
+				60CCD70B2200A399003A9757 /* rating5@2x.png in Resources */,
 				60CCD700220090E7003A9757 /* more@2x.png in Resources */,
 				600B3297220070B10011AB22 /* designbump@2x.png in Resources */,
 				60B2ED2E21F76DD700689EB1 /* Main.storyboard in Resources */,
@@ -316,6 +332,7 @@
 				600B3299220070B10011AB22 /* rss@2x.png in Resources */,
 				600B329E220070B10011AB22 /* twitter@2x.png in Resources */,
 				600B3293220070B10011AB22 /* checkmark@2x.png in Resources */,
+				60CCD70A2200A399003A9757 /* note.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,12 +358,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				60B2ED2B21F76DD700689EB1 /* ViewController.swift in Sources */,
+				60CCD7072200A2ED003A9757 /* ImageViewController.swift in Sources */,
 				60B2ED5821F77DC400689EB1 /* ReadViewController.swift in Sources */,
 				60B2ED2921F76DD700689EB1 /* AppDelegate.swift in Sources */,
 				60CCD70522009F4B003A9757 /* MapKitViewController.swift in Sources */,
+				60CCD70F2200A54D003A9757 /* ListViewController.swift in Sources */,
 				600B328022006E8E0011AB22 /* SecondViewController.swift in Sources */,
 				600B328222006EA10011AB22 /* ThirdViewController.swift in Sources */,
 				600B327E22006E860011AB22 /* FirstViewController.swift in Sources */,
+				60CCD70D2200A3CC003A9757 /* ControlViewController.swift in Sources */,
 				600B32A122007F250011AB22 /* CustomizedAppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

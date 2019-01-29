@@ -109,12 +109,36 @@ class ViewController: UIViewController {
         self.view.addSubview(btnAlert)
         
         let btnMapAlert = UIButton(type: .system)
-        btnMapAlert.frame = CGRect(x: 0, y: 520, width: 100, height: 30)
+        btnMapAlert.frame = CGRect(x: 0, y: 525, width: 100, height: 30)
         btnMapAlert.setTitle("Show me the MAP alert", for: .normal)
         btnMapAlert.sizeToFit()
         btnMapAlert.center.x = self.view.frame.width / 2
         btnMapAlert.addTarget(self, action: #selector(btnMapAlertClick(_:)), for: .touchUpInside)
         self.view.addSubview(btnMapAlert)
+        
+        let btnImageAlert = UIButton(type: .system)
+        btnImageAlert.frame = CGRect(x: 0, y: 550, width: 100, height: 30)
+        btnImageAlert.setTitle("Show me the IMAGE alert", for: .normal)
+        btnImageAlert.sizeToFit()
+        btnImageAlert.center.x = self.view.frame.width / 2
+        btnImageAlert.addTarget(self, action: #selector(btnImageAlertClick(_:)), for: .touchUpInside)
+        self.view.addSubview(btnImageAlert)
+        
+        let btnSliderAlert = UIButton(type: .system)
+        btnSliderAlert.frame = CGRect(x: 0, y: 575, width: 100, height: 30)
+        btnSliderAlert.setTitle("Show me the SLIDER alert", for: .normal)
+        btnSliderAlert.sizeToFit()
+        btnSliderAlert.center.x = self.view.frame.width / 2
+        btnSliderAlert.addTarget(self, action: #selector(btnSliderAlertClick(_:)), for: .touchUpInside)
+        self.view.addSubview(btnSliderAlert)
+        
+        let btnListAlert = UIButton(type: .system)
+        btnListAlert.frame = CGRect(x: 0, y: 600, width: 100, height: 30)
+        btnListAlert.setTitle("Show me the LIST alert", for: .normal)
+        btnListAlert.sizeToFit()
+        btnListAlert.center.x = self.view.frame.width / 2
+        btnListAlert.addTarget(self, action: #selector(btnListAlertClick(_:)), for: .touchUpInside)
+        self.view.addSubview(btnListAlert)
     }
     
     @objc func btnAlertClick(_ sender: Any) {
@@ -161,6 +185,49 @@ class ViewController: UIViewController {
         mAlert.setValue(mView, forKey: "contentViewController")
         
         self.present(mAlert, animated: false)
+    }
+    
+    @objc func btnImageAlertClick(_ sender: UIButton) {
+        let mAlert = UIAlertController(title: nil, message: "Rate this app.", preferredStyle: .alert)
+        
+        let btnOk = UIAlertAction(title: "OK", style: .default)
+        mAlert.addAction(btnOk)
+        
+        let mView = ImageViewController()
+        mAlert.setValue(mView, forKey: "contentViewController")
+        
+        self.present(mAlert, animated: false)
+    }
+    
+    @objc func btnSliderAlertClick(_ sender: UIButton) {
+        let mAlert = UIAlertController(title: nil, message: "Score this app.", preferredStyle: .alert)
+        
+        let mView = ControlViewController()
+        mAlert.setValue(mView, forKey: "contentViewController")
+        
+        let btnOk = UIAlertAction(title: "OK", style: .default) { (_) in
+            print(">>> sliderValue = \(mView.sliderValue)")
+        }
+        mAlert.addAction(btnOk)
+        
+        self.present(mAlert, animated: false)
+    }
+    
+    @objc func btnListAlertClick(_ sender: UIButton) {
+        let mAlert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
+        
+        let mView = ListViewController()
+        mView.delegate = self
+        mAlert.setValue(mView, forKey: "contentViewController")
+        
+        let btnOk = UIAlertAction(title: "OK", style: .default)
+        mAlert.addAction(btnOk)
+        
+        self.present(mAlert, animated: false)
+    }
+    
+    func didSelectRowAt(indexPath: IndexPath) {
+        print(">>> selected row is '\(indexPath.row)'")
     }
     
     @objc func presentUpdateValue(_ sender: UISwitch) {
