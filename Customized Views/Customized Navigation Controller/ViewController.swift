@@ -19,7 +19,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Chapter 2-1
         // create a button instance and set.
         let btn = UIButton(type: UIButton.ButtonType.system)
         btn.frame = CGRect(x: 50, y: 100, width: 150, height: 30)
@@ -32,9 +31,9 @@ class ViewController: UIViewController {
         // link the instance with the action function
         btn.addTarget(self, action: #selector(btnOnClick(_:)), for: .touchUpInside)
         
-        // Chapter 2-2
         // set navigation bar title
-        self.navigationItem.title = "Setting"
+//        self.navigationItem.title = "Setting"
+        initTitle(titleType: "Chrome")
         
         // create and show labels
         let lblEmail = UILabel()
@@ -94,9 +93,6 @@ class ViewController: UIViewController {
         self.txtInterval.text = "every 0 minutes"
         self.view.addSubview(self.txtInterval)
         
-        let submitBtn = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(submit(_:)))
-        self.navigationItem.rightBarButtonItem = submitBtn
-        
         // print available font list
         let fonts = UIFont.familyNames      // family name != font name
         for f in fonts {
@@ -128,5 +124,81 @@ class ViewController: UIViewController {
         self.navigationController?.pushViewController(mReadVC, animated: true)
     }
 
+    func initTitle(titleType: String) {
+        if titleType == "Submit" {
+            let submitBtn = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(submit(_:)))
+            self.navigationItem.rightBarButtonItem = submitBtn
+            
+        } else if titleType == "Two-line String" {
+            let containerView = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 36))
+            
+            let topTitle = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 18))
+            topTitle.numberOfLines = 1
+            topTitle.textAlignment = .center
+            topTitle.textColor = UIColor.white
+            topTitle.font = UIFont.systemFont(ofSize: 15)
+            topTitle.text = "58 Rooms"
+            
+            let bottomTitle = UILabel(frame: CGRect(x: 0, y: 18, width: 200, height: 18))
+            bottomTitle.numberOfLines = 1
+            bottomTitle.textAlignment = .center
+            bottomTitle.textColor = UIColor.white
+            bottomTitle.font = UIFont.systemFont(ofSize: 12)
+            bottomTitle.text = "1-night(10 Jan ~ 11 Jan)"
+            
+            containerView.addSubview(topTitle)
+            containerView.addSubview(bottomTitle)
+            
+            self.navigationItem.titleView = containerView
+            
+            self.navigationController?.navigationBar.barTintColor = UIColor(red: 0.02, green: 0.22, blue: 0.49, alpha: 1.0)
+            
+        } else if titleType == "Image" {
+            let imageTitle = UIImageView(image: UIImage(named: "swift_logo"))
+            
+            self.navigationItem.titleView = imageTitle
+            
+        } else if titleType == "Chrome" {
+            let tfTitle = UITextField()
+            tfTitle.frame = CGRect(x: 0, y: 0, width: 300, height: 35)
+            tfTitle.backgroundColor = UIColor.white
+            tfTitle.font = UIFont.systemFont(ofSize: 13)
+            tfTitle.autocapitalizationType = .none
+            tfTitle.autocorrectionType = .no
+            tfTitle.spellCheckingType = .no
+            tfTitle.keyboardType = .URL
+            tfTitle.keyboardAppearance = .dark
+            tfTitle.layer.borderWidth = 0.3
+            tfTitle.layer.borderColor = UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1.0).cgColor
+            
+            let backImage = UIImage(named: "arrow-back")
+            let leftItem = UIBarButtonItem(image: backImage, style: .plain, target: self, action: nil)
+            
+            let rightView = UIView()
+            rightView.frame = CGRect(x: 0, y: 0, width: 70, height: 37)
+            
+            let cntLabel = UILabel()
+            cntLabel.frame = CGRect(x: 10, y: 8, width: 20, height: 20)
+            cntLabel.font = UIFont.boldSystemFont(ofSize: 10)
+            cntLabel.textColor = UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1.0)
+            cntLabel.text = "72"
+            cntLabel.textAlignment = .center
+            cntLabel.layer.cornerRadius = 3
+            cntLabel.layer.borderWidth = 2
+            cntLabel.layer.borderColor = UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1.0).cgColor
+            rightView.addSubview(cntLabel)
+            
+            let moreButton = UIButton(type: .system)
+            moreButton.frame = CGRect(x: 50, y: 10, width: 16, height: 16)
+            moreButton.setImage(UIImage(named: "more"), for: .normal)
+            rightView.addSubview(moreButton)
+            
+            let rightItem = UIBarButtonItem(customView: rightView)
+            
+            self.navigationItem.titleView = tfTitle
+            self.navigationItem.leftBarButtonItem = leftItem
+            self.navigationItem.rightBarButtonItem = rightItem
+        }
+    }
 }
 

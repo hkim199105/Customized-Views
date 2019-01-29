@@ -9,7 +9,7 @@
 import UIKit
 
 // attribute to make system recognize this file as the App Delegate
-@UIApplicationMain
+//@UIApplicationMain
 
 // UIResponder: Class
 // UIApplicationDelegate: Protocol
@@ -29,7 +29,7 @@ class CustomizedAppDelegate: UIResponder, UIApplicationDelegate {
         let tab03 = ThirdViewController()
         
         tbC.setViewControllers([tab01, tab02, tab03], animated: false)
-        tab01.tabBarItem = UITabBarItem(title: "Calendar", image: UIImage(named: "alendar"), selectedImage: nil)
+        tab01.tabBarItem = UITabBarItem(title: "Calendar", image: UIImage(named: "calendar"), selectedImage: nil)
         tab02.tabBarItem = UITabBarItem(title: "File", image: UIImage(named: "file-tree"), selectedImage: nil)
         tab03.tabBarItem = UITabBarItem(title: "Photo", image: UIImage(named: "photo"), selectedImage: nil)
         
