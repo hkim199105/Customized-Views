@@ -8,14 +8,43 @@
 
 import UIKit
 
-@UIApplicationMain
+//@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        if let tbC = self.window?.rootViewController as? UITabBarController {
+            if let tbItems = tbC.tabBar.items {
+                tbItems[0].image = UIImage(named: "designbump")?.withRenderingMode(.alwaysOriginal)
+                tbItems[0].title = "Calendar"
+                tbItems[1].image = UIImage(named: "rss")?.withRenderingMode(.alwaysOriginal)
+                tbItems[1].title = "File"
+                tbItems[2].image = UIImage(named: "facebook")?.withRenderingMode(.alwaysOriginal)
+                tbItems[2].title = "Photo"
+                
+                for tbItem in tbItems {
+                    tbItem.selectedImage = UIImage(named: "checkmark")?.withRenderingMode(.alwaysOriginal)
+                    // replace this with appearance proxy
+//                    tbItem.setTitleTextAttributes([NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue): UIColor.gray], for: .disabled)
+//                    tbItem.setTitleTextAttributes([NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue): UIColor.red], for: .selected)
+//                    tbItem.setTitleTextAttributes([NSAttributedString.Key(rawValue: NSAttributedString.Key.font.rawValue): UIFont.systemFont(ofSize: 15)], for: .normal)
+                }
+                
+                let tbItemProxy = UITabBarItem.appearance()
+                tbItemProxy.setTitleTextAttributes([NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue): UIColor.gray], for: .disabled)
+                tbItemProxy.setTitleTextAttributes([NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue): UIColor.red], for: .selected)
+                tbItemProxy.setTitleTextAttributes([NSAttributedString.Key(rawValue: NSAttributedString.Key.font.rawValue): UIFont.systemFont(ofSize: 15)], for: .normal)
+            }
+            
+            // replace this with appearance proxy
+//            tbC.tabBar.tintColor = UIColor.white
+//            tbC.tabBar.backgroundImage = UIImage(named: "menubar-bg-mini")
+            let tbProxy = UITabBar.appearance()
+            tbProxy.tintColor = UIColor.white
+            tbProxy.backgroundImage = UIImage(named: "menubar-bg-mini")
+        }
         return true
     }
 
