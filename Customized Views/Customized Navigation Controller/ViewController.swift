@@ -99,12 +99,68 @@ class ViewController: UIViewController {
             let fontName = UIFont.fontNames(forFamilyName: f)
             print("\(f) \(fontName)")
         }
+        
+        let btnAlert = UIButton(type: .system)
+        btnAlert.frame = CGRect(x: 0, y: 500, width: 100, height: 30)
+        btnAlert.setTitle("Show me the alert", for: .normal)
+        btnAlert.sizeToFit()
+        btnAlert.center.x = self.view.frame.width / 2
+        btnAlert.addTarget(self, action: #selector(btnAlertClick(_:)), for: .touchUpInside)
+        self.view.addSubview(btnAlert)
+        
+        let btnMapAlert = UIButton(type: .system)
+        btnMapAlert.frame = CGRect(x: 0, y: 520, width: 100, height: 30)
+        btnMapAlert.setTitle("Show me the MAP alert", for: .normal)
+        btnMapAlert.sizeToFit()
+        btnMapAlert.center.x = self.view.frame.width / 2
+        btnMapAlert.addTarget(self, action: #selector(btnMapAlertClick(_:)), for: .touchUpInside)
+        self.view.addSubview(btnMapAlert)
+    }
+    
+    @objc func btnAlertClick(_ sender: Any) {
+        let mAlert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
+        
+        let btnCancel = UIAlertAction(title: "Cancel", style: .cancel)
+        mAlert.addAction(btnCancel)
+        
+        let btnOk = UIAlertAction(title: "OK", style: .default)
+        mAlert.addAction(btnOk)
+        
+        let mView = UIViewController()
+        mView.view.backgroundColor = UIColor.blue
+        mAlert.setValue(mView, forKey: "contentViewController")
+        
+        let lblNotice = UILabel()
+        lblNotice.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
+        lblNotice.numberOfLines = 2
+        lblNotice.text = "The blue area is customizable\nwhich is 'contentViewController'"
+        lblNotice.font = UIFont.boldSystemFont(ofSize: 20)
+        lblNotice.textColor = UIColor.white
+        lblNotice.textAlignment = .center
+        mView.view.addSubview(lblNotice)
+        
+        self.present(mAlert, animated: true)
     }
 
     @objc func btnOnClick(_ sender: Any) {
         if let btn = sender as? UIButton {
             btn.setTitle("It's clicked!", for: UIControl.State.normal)
         }
+    }
+    
+    @objc func btnMapAlertClick(_ sender: UIButton) {
+        let mAlert = UIAlertController(title: nil, message: "Are you here?", preferredStyle: .alert)
+        
+        let btnOk = UIAlertAction(title: "OK", style: .default)
+        mAlert.addAction(btnOk)
+        
+        let btnCancel = UIAlertAction(title: "Cancel", style: .cancel)
+        mAlert.addAction(btnCancel)
+        
+        let mView = MapKitViewController()
+        mAlert.setValue(mView, forKey: "contentViewController")
+        
+        self.present(mAlert, animated: false)
     }
     
     @objc func presentUpdateValue(_ sender: UISwitch) {

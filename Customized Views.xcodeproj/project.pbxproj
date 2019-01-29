@@ -34,6 +34,7 @@
 		60CCD6FD22008E8D003A9757 /* swift_logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60CCD6FC22008E8D003A9757 /* swift_logo@3x.png */; };
 		60CCD700220090E7003A9757 /* more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60CCD6FE220090E7003A9757 /* more@2x.png */; };
 		60CCD701220090E7003A9757 /* arrow-back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60CCD6FF220090E7003A9757 /* arrow-back@2x.png */; };
+		60CCD70522009F4B003A9757 /* MapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CCD70422009F4B003A9757 /* MapKitViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		60CCD6FC22008E8D003A9757 /* swift_logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "swift_logo@3x.png"; sourceTree = "<group>"; };
 		60CCD6FE220090E7003A9757 /* more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more@2x.png"; sourceTree = "<group>"; };
 		60CCD6FF220090E7003A9757 /* arrow-back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-back@2x.png"; sourceTree = "<group>"; };
+		60CCD70422009F4B003A9757 /* MapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				60B2ED2A21F76DD700689EB1 /* ViewController.swift */,
+				60CCD70422009F4B003A9757 /* MapKitViewController.swift */,
 			);
 			path = "Customized Navigation Controller";
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				60B2ED2B21F76DD700689EB1 /* ViewController.swift in Sources */,
 				60B2ED5821F77DC400689EB1 /* ReadViewController.swift in Sources */,
 				60B2ED2921F76DD700689EB1 /* AppDelegate.swift in Sources */,
+				60CCD70522009F4B003A9757 /* MapKitViewController.swift in Sources */,
 				600B328022006E8E0011AB22 /* SecondViewController.swift in Sources */,
 				600B328222006EA10011AB22 /* ThirdViewController.swift in Sources */,
 				600B327E22006E860011AB22 /* FirstViewController.swift in Sources */,
