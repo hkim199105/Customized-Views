@@ -24,6 +24,8 @@
 		600B329E220070B10011AB22 /* twitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 600B3291220070B10011AB22 /* twitter@2x.png */; };
 		600B329F220070B10011AB22 /* menubar-bg-mini.png in Resources */ = {isa = PBXBuildFile; fileRef = 600B3292220070B10011AB22 /* menubar-bg-mini.png */; };
 		600B32A122007F250011AB22 /* CustomizedAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600B32A022007F250011AB22 /* CustomizedAppDelegate.swift */; };
+		607468B72204A62E00C43E49 /* HKTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607468B62204A62E00C43E49 /* HKTabBarViewController.swift */; };
+		607468BA2204A97500C43E49 /* HKStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607468B92204A97500C43E49 /* HKStepper.swift */; };
 		60B2ED2921F76DD700689EB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B2ED2821F76DD700689EB1 /* AppDelegate.swift */; };
 		60B2ED2B21F76DD700689EB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B2ED2A21F76DD700689EB1 /* ViewController.swift */; };
 		60B2ED2E21F76DD700689EB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60B2ED2C21F76DD700689EB1 /* Main.storyboard */; };
@@ -40,6 +42,7 @@
 		60CCD70B2200A399003A9757 /* rating5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60CCD7092200A399003A9757 /* rating5@2x.png */; };
 		60CCD70D2200A3CC003A9757 /* ControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CCD70C2200A3CC003A9757 /* ControlViewController.swift */; };
 		60CCD70F2200A54D003A9757 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CCD70E2200A54D003A9757 /* ListViewController.swift */; };
+		60CCD7122200B33D003A9757 /* HKButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CCD7112200B33D003A9757 /* HKButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +80,8 @@
 		600B3291220070B10011AB22 /* twitter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitter@2x.png"; sourceTree = "<group>"; };
 		600B3292220070B10011AB22 /* menubar-bg-mini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menubar-bg-mini.png"; sourceTree = "<group>"; };
 		600B32A022007F250011AB22 /* CustomizedAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizedAppDelegate.swift; sourceTree = "<group>"; };
+		607468B62204A62E00C43E49 /* HKTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKTabBarViewController.swift; sourceTree = "<group>"; };
+		607468B92204A97500C43E49 /* HKStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKStepper.swift; sourceTree = "<group>"; };
 		60B2ED2521F76DD700689EB1 /* Button Hell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Button Hell.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		60B2ED2821F76DD700689EB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60B2ED2A21F76DD700689EB1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +102,7 @@
 		60CCD7092200A399003A9757 /* rating5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rating5@2x.png"; sourceTree = "<group>"; };
 		60CCD70C2200A3CC003A9757 /* ControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlViewController.swift; sourceTree = "<group>"; };
 		60CCD70E2200A54D003A9757 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		60CCD7112200B33D003A9757 /* HKButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +202,7 @@
 			children = (
 				600B3285220070370011AB22 /* Resources */,
 				60B2ED2821F76DD700689EB1 /* AppDelegate.swift */,
+				60CCD7102200B31D003A9757 /* Customized Class */,
 				600B328422006EC20011AB22 /* Customized Navigation Controller */,
 				600B328322006EA90011AB22 /* Customized Tab Bar Controller */,
 				60B2ED2C21F76DD700689EB1 /* Main.storyboard */,
@@ -205,6 +212,16 @@
 				60B2ED5721F77DC400689EB1 /* ReadViewController.swift */,
 			);
 			path = "Customized Views";
+			sourceTree = "<group>";
+		};
+		60CCD7102200B31D003A9757 /* Customized Class */ = {
+			isa = PBXGroup;
+			children = (
+				60CCD7112200B33D003A9757 /* HKButton.swift */,
+				607468B62204A62E00C43E49 /* HKTabBarViewController.swift */,
+				607468B92204A97500C43E49 /* HKStepper.swift */,
+			);
+			path = "Customized Class";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,13 +374,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				607468BA2204A97500C43E49 /* HKStepper.swift in Sources */,
 				60B2ED2B21F76DD700689EB1 /* ViewController.swift in Sources */,
 				60CCD7072200A2ED003A9757 /* ImageViewController.swift in Sources */,
 				60B2ED5821F77DC400689EB1 /* ReadViewController.swift in Sources */,
 				60B2ED2921F76DD700689EB1 /* AppDelegate.swift in Sources */,
+				60CCD7122200B33D003A9757 /* HKButton.swift in Sources */,
 				60CCD70522009F4B003A9757 /* MapKitViewController.swift in Sources */,
 				60CCD70F2200A54D003A9757 /* ListViewController.swift in Sources */,
 				600B328022006E8E0011AB22 /* SecondViewController.swift in Sources */,
+				607468B72204A62E00C43E49 /* HKTabBarViewController.swift in Sources */,
 				600B328222006EA10011AB22 /* ThirdViewController.swift in Sources */,
 				600B327E22006E860011AB22 /* FirstViewController.swift in Sources */,
 				60CCD70D2200A3CC003A9757 /* ControlViewController.swift in Sources */,

@@ -139,6 +139,18 @@ class ViewController: UIViewController {
         btnListAlert.center.x = self.view.frame.width / 2
         btnListAlert.addTarget(self, action: #selector(btnListAlertClick(_:)), for: .touchUpInside)
         self.view.addSubview(btnListAlert)
+        
+        let btnHKim01 = HKButton(type: .circle)
+        btnHKim01.frame = CGRect(x: 0, y: 650, width: 100, height: 30)
+        btnHKim01.center.x = self.view.frame.width / 2
+        btnHKim01.style = .circle
+        self.view.addSubview(btnHKim01)
+        
+        let btnHKim02 = HKButton(type: .rect)
+        btnHKim02.frame = CGRect(x: 0, y: 675, width: 100, height: 30)
+        btnHKim02.center.x = self.view.frame.width / 2
+        btnHKim01.style = .rect
+        self.view.addSubview(btnHKim02)
     }
     
     @objc func btnAlertClick(_ sender: Any) {

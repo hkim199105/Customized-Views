@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XsA-nf-naN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0XH-QH-KEM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -93,6 +93,73 @@
             </objects>
             <point key="canvasLocation" x="-580" y="134"/>
         </scene>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="hiX-Yb-k7Y">
+            <objects>
+                <tabBarController id="0XH-QH-KEM" customClass="HKTabBarViewController" customModule="Button_Hell" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="612-Qk-SkF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="dFA-1D-K5A" kind="relationship" relationship="viewControllers" id="WjS-Y8-mNd"/>
+                        <segue destination="SyW-uQ-IiA" kind="relationship" relationship="viewControllers" id="35w-k2-NaO"/>
+                        <segue destination="SdY-7k-Vks" kind="relationship" relationship="viewControllers" id="1cD-wG-LQz"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d2C-Qz-fFY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1020" y="1188"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="e8W-KN-TTq">
+            <objects>
+                <viewController storyboardIdentifier="VIEW01" id="dFA-1D-K5A" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xfe-RN-EtD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="eCA-lo-69v"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="gCP-7Q-vBH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iiR-Wu-6l4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-206" y="838"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="Myc-AD-TEK">
+            <objects>
+                <viewController storyboardIdentifier="VIEW02" id="SyW-uQ-IiA" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jvf-ch-UT6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="gID-dW-hdG"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="E8K-Iy-Ubo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4G4-BA-1NV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="454" y="1188"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="PYk-XU-xjq">
+            <objects>
+                <viewController storyboardIdentifier="VIEW03" id="SdY-7k-Vks" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QjX-Xx-M3h">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="5H0-1E-9Fd"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="9ql-E0-CAu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nYN-GI-Icy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-207" y="1560"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -100,6 +167,13 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKA-6b-hVy" customClass="HKButton" customModule="Button_Hell" customModuleProvider="target">
+                                <rect key="frame" x="61" y="489" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
