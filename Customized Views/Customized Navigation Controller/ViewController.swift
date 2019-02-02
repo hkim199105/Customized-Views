@@ -151,6 +151,11 @@ class ViewController: UIViewController {
         btnHKim02.center.x = self.view.frame.width / 2
         btnHKim01.style = .rect
         self.view.addSubview(btnHKim02)
+        
+        let stepper = HKStepper()
+        stepper.frame = CGRect(x: 0, y: 700, width: 50, height: 50)
+        stepper.addTarget(self, action: #selector(logHKStepper(_:)), for: .valueChanged)
+        self.view.addSubview(stepper)
     }
     
     @objc func btnAlertClick(_ sender: Any) {
@@ -334,6 +339,10 @@ class ViewController: UIViewController {
             self.navigationItem.leftBarButtonItem = leftItem
             self.navigationItem.rightBarButtonItem = rightItem
         }
+    }
+    
+    @objc func logHKStepper(_ sender: HKStepper) {
+        NSLog("Current value of HKStepper is \(sender.value)")
     }
 }
 
